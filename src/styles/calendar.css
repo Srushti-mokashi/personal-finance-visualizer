@@ -1,0 +1,107 @@
+/* ROOT */
+.calendar-dark {
+  background: transparent;
+  color: #e5e7eb;
+}
+
+/* NAVIGATION */
+.calendar-dark .react-calendar__navigation {
+  margin-bottom: 1.5rem;
+}
+
+.calendar-dark .react-calendar__navigation button {
+  font-size: 1rem;
+  color: #e5e7eb;
+  background: transparent;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.calendar-dark .react-calendar__navigation button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ================= WEEKDAYS ================= */
+.calendar-dark .react-calendar__month-view__weekdays {
+  display: grid !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+
+/* WEEKDAY BOX */
+.calendar-dark .react-calendar__month-view__weekdays__weekday {
+  display: flex;                      /* ✅ CENTER SYSTEM */
+  align-items: center;                /* vertical */
+  justify-content: center;            /* horizontal */
+  padding: 0 !important;
+  height: 48px;                       /* ✅ SAME HEIGHT FOR ALL */
+}
+
+/* WEEKDAY TEXT */
+.calendar-dark
+  .react-calendar__month-view__weekdays__weekday abbr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+/* ================= DAYS GRID ================= */
+.calendar-dark .react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  
+}
+
+/* DATE BOX */
+.calendar-dark .react-calendar__tile {
+  width: 100% !important;
+  max-width: none !important;
+
+  height: 42px;
+  border-radius: 1rem;
+
+  display: flex;                      /* ✅ CENTER SYSTEM */
+  align-items: center;                /* vertical */
+  justify-content: center;            /* horizontal */
+
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1;                     /* ✅ REMOVE BASELINE SHIFT */
+}
+
+/* HOVER */
+.calendar-dark .react-calendar__tile:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* TODAY */
+.calendar-dark .react-calendar__tile--now {
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+/* SELECTED */
+.calendar-dark .react-calendar__tile--active {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* DISABLED */
+.calendar-dark .react-calendar__tile:disabled {
+  color: #475569;
+}
+
+/* REMOVE DEFAULT BORDERS */
+.calendar-dark,
+.calendar-dark * {
+  border: none !important;
+}
